@@ -1,0 +1,14 @@
+html {
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+body {
+   background: var(--bg-color);
+   color: var(--text-color);
+}
+
+section {
+   min-height: 100vh;
+   padding: 10rem 9% 5rem;
+}

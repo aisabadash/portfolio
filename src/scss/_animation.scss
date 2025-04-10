@@ -1,0 +1,82 @@
+// KEYFRAMES ANIMATION
+
+@keyframes homeBgText {
+   0%, 10%, 100% {
+      background-position: -33rem 0;
+   }
+   65%, 85% {
+      background-position: 0 0;
+   }
+}
+
+@keyframes homeCursorText {
+   0%, 10%, 100% {
+      width: 0;
+   }
+   65%, 78%, 85% {
+      width: 100%;
+      opacity: 1;
+   }
+   75%, 81% {
+      opacity: 0;
+   }
+}
+
+@keyframes showRight {
+   100% {
+      width: 0;
+   }
+}
+
+@keyframes homeSpinner {
+   100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+   }
+}
+
+//ANIMATION RELOAD AND SCROLL
+.animate {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background: var(--second-bg-color);
+   z-index: 98;
+}
+
+.animate.home__img {
+   width: 50%;
+}
+
+.logo .animate,
+.navbar .animate,
+.menu-icon-wrapper .animate,
+.home.show-animate .animate {
+   animation: showRight 1s ease forwards;
+   animation-delay: calc(0.3s * var(--i));
+}
+
+.animate.scroll {
+   transition: 1s ease;
+   transition-delay: calc(0.3s / var(--i));
+   animation: none;
+}
+
+section:nth-child(odd) .animate,
+.header .animate {
+   background: var(--bg-color);
+}
+
+.experience .experience__box .animate.scroll {
+   width: 105%;
+}
+
+.projects.show-animate .animate.scroll,
+.experience.show-animate .animate.scroll,
+.skills.show-animate .animate.scroll,
+.contact.show-animate .animate.scroll,
+.footer.show-animate .animate.scroll {
+   transition-delay: calc(0.3s * var(--i));
+   width: 0;
+}

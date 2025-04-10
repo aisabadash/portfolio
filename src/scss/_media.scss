@@ -1,0 +1,118 @@
+//BREAPOINTS
+@media (max-width: 1200px) {
+   html {
+      font-size: 55%;
+   }
+}
+
+@media (max-width: 991px) {
+   .header {
+      padding: 2rem 4%;
+   }
+
+   section {
+      padding: 10rem 4% 2rem;
+   }
+   .home {
+      padding: 0 4%;
+   }
+
+   .footer {
+      padding: 2rem 4%;
+   }
+}
+@media (max-width: 768px) {
+   .header {
+      background: var(--bg-color);
+   }
+
+   #menu-icon {
+      display: block;
+   }
+
+   .navbar {
+      position: absolute;
+      top: 100%;
+      left: -100%;
+      width: 100%;
+      padding: 1rem 4%;
+      background: var(--main-color);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      transition: 0.25s ease;
+      transition-delay: 0.25s;
+   }
+
+   .navbar.active {
+      left: 0;
+      transition-delay: 0s;
+   }
+
+   .navbar .navbar__active {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background:var(--bg-color);
+      border-top: 0.1rem solid rgba(0,0,0,0.2);
+      z-index: -1;
+      transition: 0.25s ease;
+      transition-delay: 0s;
+   }
+
+   .navbar.active .navbar__active {
+      left: 0;
+      transition-delay: 0.25s;
+   }
+   
+   .navbar a {
+      display: block;
+      font-size: 2rem;
+      margin: 3rem 0;
+      transform: translateX(-20rem);
+      transition: 0.25s ease;
+      transition-delay: 0s;
+   }
+
+   .navbar.active a {
+      transform: translateX(0);
+      transition-delay: 0.25s;
+   }
+
+   .home {
+      flex-direction: column-reverse;
+      justify-content: center;
+   }
+
+   .home__content {
+      margin-top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+   }
+}
+
+@media (max-width: 575px) {
+   html {
+      font-size: 50%;
+   }
+
+   .home__content h1 {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .footer {
+      flex-direction: column;
+      justify-content: center;
+   }
+}
+
+@media (max-width: 425px) {
+   .home__content h1 {
+      font-size: 4rem;
+   }
+}
