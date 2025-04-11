@@ -1,10 +1,9 @@
 import Swiper from 'swiper';
-import { Navigation, Autoplay, Grid } from 'swiper/modules';
+import { Navigation, Pagination, Parallax, Mousewheel, Controller} from 'swiper/modules';
+Swiper.use([Navigation, Pagination, Parallax, Mousewheel, Controller]);
 
-Swiper.use([Navigation, Autoplay, Grid]);
-import { Fancybox } from "@fancyapps/ui";
-
-
+import gsap from 'gsap';
+import { Power2 } from 'gsap';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -22,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
       navbar.classList.toggle('active');
    });
 
-   // scroll sections
+   //Scroll sections
    let sections = document.querySelectorAll('section');
    let navLinks = document.querySelectorAll('header nav a');
 
@@ -50,8 +49,8 @@ window.addEventListener('DOMContentLoaded', () => {
       });
 
       //sticky header
-      let header = document.querySelector('header');
-      header.classList.toggle('sticky', window.scrollY > 100);
+      // let header = document.querySelector('header');
+      // header.classList.toggle('sticky', window.scrollY > 100);
 
       //remove toggle icon and navbar when click navbar links (scroll)
       menuIcon.classList.remove('svg-bx-x-dims');
@@ -80,6 +79,73 @@ window.addEventListener('DOMContentLoaded', () => {
                                  </svg>`;
             }, 1500);
          });
+   });
+
+   //Slider SWIPER
+   const swiperImg = new Swiper('.slider-img', {
+      loop: false,
+      speed: 2400,
+      parallax: true,
+      pagination: {
+         el: '.slider-pagination-count .total',
+         type: 'custom',
+         renderCustom: function (swiper, current, total) {
+            let totalRes = total >= 10 ? total : `0${total}`;
+            return totalRes;
+         }
+      }
+   });
+
+   const swiperText = new Swiper('.slider-text', {
+      loop: false,
+      speed: 2400,
+      // mousewheel: {
+      //    invert: false
+      // },
+      // pagination: {
+      //    el: ".swiper-pagination",
+      //    clickable: true,
+      // },
+      // scrollbar: {
+      //    el: ".swiper-scrollbar",
+      //    draggable: true,
+      // },
+      navigation: {
+         prevEl: ".swiper-button-prev",
+         nextEl: ".swiper-button-next",
+      }
+   });
+   swiperImg.controller.control = swiperText;
+   swiperText.controller.control = swiperImg;
+
+   //SLIDE CHANGE
+   let curnum = document.querySelector('.slider-pagination-count .current');
+   // let pagcur = document.querySelector('.slider-pagination-current__num');
+
+   swiperText.on('slideChange', function () {
+      let ind = swiperText.realIndex + 1,
+         indRes = ind >= 10 ? ind : `0${ind}`;
+      gsap.to(curnum, .3, {
+         force3D: true,
+         y: -10,
+         opacity: 0,
+         ease: Power2.easeInOut,
+         onComplete: function () {
+            gsap.to(curnum, .1, {
+               force3D: true,
+               y: 10
+            });
+            curnum.innerHTML = indRes;
+            // pagcur.innerHTML = indRes;
+         }
+      });
+      gsap.to(curnum, .3, {
+         force3D: true,
+         y: 0,
+         opacity: 1,
+         ease: Power2.easeIn,
+         delay: .3
+      });
    });
 
 });

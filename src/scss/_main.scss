@@ -182,10 +182,8 @@
 //------PROJECTS SECTION--------
 .projects {
 	display: flex;
-	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	gap: 2rem;
 	background: var(--second-bg-color);
 	padding-bottom: 6rem;
 }
@@ -200,16 +198,60 @@
 .heading span {
 	color: var(--main-color);
 }
+
 .projects__content {
-	text-align: center;
+	width: 100%;
+	position: relative;
 }
-.projects__content h3 {
+
+.slider-container {
+   width: 100%;
+   height: 100%;
+	min-height: 40rem;
+   overflow: hidden;
+   position: relative;
+}
+
+.slider-text {
+   position: absolute;
+   z-index: 3;
+   width: 100%;
+	height: 100%;
+}
+.slider-text__slide {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;   
+}
+
+.slider-img {
+	top: 0;
+	right: 0;
+   height: 100%;
+   width: 45%;
+   overflow: hidden;
+   position: absolute;
+	border: 0.2rem solid var(--main-color);
+	border-radius: 0.6rem;
+}
+.slider-img__slide {
+   height: 100%;
+   overflow: hidden;
+}
+.slider-img__bg {
+   height: 100%;
+   background-position: center;
+   background-size: cover;   
+}
+
+.slider-text__content h3 {
 	position: relative;
 	display: inline-block;
 	font-size: 2.6rem;
+	margin-top: 4rem;
 }
-.projects__content p {
-	position: relative;
+.slider-text__content p {
+	max-width: 45%;
 	font-size: 1.6rem;
 	margin: 2rem 0 3rem;
 }
@@ -219,6 +261,63 @@
 }
 .btn-box.btns a::before {
 	background: var(--second-bg-color);
+}
+
+.slider-pagination-count {
+   position: absolute;
+   left: 0;
+   top: 1rem;
+   width: 12rem;
+	font-size: 3rem;
+	font-weight: 700;
+	color: transparent;
+	-webkit-text-stroke: 0.7px var(--main-color);
+   z-index: 1;
+}
+
+.slider-pagination-count .current {
+	font-size: 4rem;
+	display: inline-block; 
+	min-width: 5.6rem;    
+}
+
+.slider-pagination-count .total {
+	padding-left: 0.4rem;
+}
+
+.slider-navigation {
+	position: absolute;
+	width: 10rem;
+	left: 0;
+	bottom: 1rem;
+	z-index: 3;
+
+   .swiper-button-prev,
+   .swiper-button-next {
+		top: 0;
+		margin: 0;
+      width: 4rem;
+      height: 4rem;
+   } 
+
+   .swiper-button-prev {
+      left: 0;
+		margin-right: 1rem;
+   }
+
+   .swiper-button-next {
+      right: 0;
+   } 
+
+	.swiper-button-prev::after,
+   .swiper-button-next::after {
+		font-size: 1.8rem;
+		font-weight: 900;
+	}
+
+	.slider-navigation .btn-box .btn::before {
+		background: var(--second-bg-color);
+	}
 }
 
 //------EXPERIENCE SECTION--------

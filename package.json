@@ -13,7 +13,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@fancyapps/ui": "^5.0.36",
     "browser-sync": "latest",
     "del": "latest",
     "gulp": "^4.0.2",
@@ -43,5 +42,8 @@
     "webp-converter": "2.2.3",
     "webpack": "latest",
     "webpack-stream": "latest"
+  },
+  "dependencies": {
+    "gsap": "^3.12.7"
   }
 }
