@@ -4,8 +4,9 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-   <link type="image/x-icon" href="img/ico/favicon.ico" rel="favicon">
-   <link rel="stylesheet" href="css/style.min.css?_v=20250412003711">
+   <!-- <link type="image/x-icon" href="img/favicon/favicon.ico" rel="favicon"> -->
+   <link type="image/x-icon" href="favicon.ico" rel="favicon">
+   <link rel="stylesheet" href="css/style.min.css?_v=20250414110155">
    <title>Personal Portfolio website HTML CSS Javascript</title>
 </head>
 
@@ -71,75 +72,61 @@
    <section class="projects" id="projects">
       <h2 class="heading">My <span>projects</span><span class="animate scroll" style="--i:1;"></span></h2>
 
-      <div class="projects__content">
          <div class="slider-container">
             <div class="slider-text">
                <div class="swiper-wrapper">
                   <div class="swiper-slide slider-text__slide">
                      <div class="slider-text__content">
-                        <h3>Front-End Project<span class="animate scroll" style="--i:3;"></span></h3>
+                        <h3>Insurance Web Application<span class="animate scroll" style="--i:3;"></span></h3>
                         <p>
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugiat corporis ipsum
-                           dolorem architecto sunt vero qui facere quasi, facilis neque consequuntur aperiam veniam
-                           consectetur dicta ea illum quibusdam rem.
+                           Built a full-stack insurance web application using <span>React</span>, <span>Node.js</span>, <span>Express.js</span> and <span>MongoDB</span>. The application features a responsive design with <span>Bootstrap</span> and a <span>RESTful API</span> for back-end communication.
                            <span class="animate scroll" style="--i:4;"></span>
                         </p>
 
-                        <!-- <div class="btn-box btns">
-                           <a class="btn" href="#">Read More</a>
-                           <span class="animate scroll" style="--i:5;"></span>
-                        </div> -->
+                        <div class="slider-text__sci">
+                           <a role="link" aria-disabled="true" tabindex="-1">
+                              <svg class="svg-bx-link-external-dims">
+                                 <use xlink:href="img/icons/icons.svg#bx-link-external"></use>
+                             </svg>
+                           </a>
+                           <a href="https://github.com/aisabadash/FinalProjectSabadash.git" target="_blank">
+                              <svg class="svg-bxl-github-dims">
+                                 <use xlink:href="img/icons/icons.svg#bxl-github"></use>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
+
+                     <div class="slider-text__img">
+                        <picture><source srcset="img/project-2-4.webp" type="image/webp"><img src="img/project-2-4.jpg" alt="project screenshot"></picture>
                      </div>
                   </div>
                   <div class="swiper-slide slider-text__slide">
                      <div class="slider-text__content">
-                        <h3>Front-End Project<span class="animate scroll" style="--i:3;"></span></h3>
+                        <h3>Personal Web Portfolio<span class="animate scroll" style="--i:3;"></span></h3>
                         <p>
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugiat corporis ipsum
-                           dolorem architecto sunt vero qui facere quasi, facilis neque consequuntur aperiam veniam
-                           consectetur dicta ea illum quibusdam rem.
+                           Designed and developed a responsive portfolio website using <span>HTML5</span>, <span>CSS3</span> and <span>JavaScript</span> to showcase projects, skills, and contact information.
                            <span class="animate scroll" style="--i:4;"></span>
                         </p>
+                        <div class="slider-text__sci">
+                           <a href="https://aisabadash.github.io/portfolio/dist/" target="_blank">
+                              <svg class="svg-bx-link-external-dims">
+                                 <use xlink:href="img/icons/icons.svg#bx-link-external"></use>
+                             </svg>
+                           </a>
+                           <a href="https://github.com/aisabadash/portfolio.git" target="_blank">
+                              <svg class="svg-bxl-github-dims">
+                                 <use xlink:href="img/icons/icons.svg#bxl-github"></use>
+                              </svg>
+                           </a>
+                        </div>
+                     </div>
 
-                        <!-- <div class="btn-box btns">
-                           <a class="btn" href="#">Read More</a>
-                           <span class="animate scroll" style="--i:5;"></span>
-                        </div> -->
+                     <div class="slider-text__img">
+                        <picture><source srcset="img/project-1-4.webp" type="image/webp"><img src="img/project-1-4.jpg" alt="project screenshot"></picture>
                      </div>
                   </div>
-                  <div class="swiper-slide slider-text__slide">
-                     <div class="slider-text__content">
-                        <h3>Front-End Project<span class="animate scroll" style="--i:3;"></span></h3>
-                        <p>
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora fugiat corporis ipsum
-                           dolorem architecto sunt vero qui facere quasi, facilis neque consequuntur aperiam veniam
-                           consectetur dicta ea illum quibusdam rem.
-                           <span class="animate scroll" style="--i:4;"></span>
-                        </p>
 
-                        <!-- <div class="btn-box btns">
-                           <a class="btn" href="#">Read More</a>
-                           <span class="animate scroll" style="--i:5;"></span>
-                        </div> -->
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-            <div class="slider-img">
-               <div class="swiper-wrapper">
-                  <div class="swiper-slide slider-img__slide">
-                     <div class="slider-img__bg" data-swiper-parallax="20%"
-                        style="background-image: url(../img/portfolio-3.jpg);"></div>
-                  </div>
-                  <div class="swiper-slide slider-img__slide">
-                     <div class="slider-img__bg" data-swiper-parallax="20%"
-                        style="background-image: url(../img/home-3.jpg);"></div>
-                  </div>
-                  <div class="swiper-slide slider-img__slide">
-                     <div class="slider-img__bg" data-swiper-parallax="20%"
-                        style="background-image: url(../img/home-2.jpg);"></div>
-                  </div>
                </div>
             </div>
 
@@ -156,7 +143,6 @@
                <span class="animate scroll" style="--i:2;"></span>
             </div>
          </div>
-      </div>
    </section>
 
    <!-- experience section -->
@@ -342,7 +328,7 @@
          </div>
 
          <div class="contact__content">
-            <a href="#" target="_blank">
+            <a href="tg://resolve?domain=Anna_Sabadash" target="_blank">
                <svg class="svg-bxl-telegram-dims">
                   <use xlink:href="img/icons/icons.svg#bxl-telegram"></use>
                </svg>
@@ -351,7 +337,7 @@
          </div>
 
          <div class="contact__content">
-            <a href="#" target="_blank">
+            <a href=" https://wa.me/420607273820" target="_blank">
                <svg class="svg-bxl-whatsapp-dims">
                   <use xlink:href="img/icons/icons.svg#bxl-whatsapp"></use>
                </svg>
@@ -389,7 +375,7 @@
 </footer>
    </div>
 
-   <script src="js/app.min.js?_v=20250412003711"></script>
+   <script src="js/app.min.js?_v=20250414110155"></script>
 </body>
 
 </html>

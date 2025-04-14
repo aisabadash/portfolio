@@ -17,6 +17,16 @@
       padding: 0 4%;
    }
 
+   .slider-text__slide {
+      flex-direction: column-reverse;
+      justify-content: start;
+      text-align: center;
+   }
+
+   .slider-text__sci {
+      margin: 0 auto;
+   }
+   
    .footer {
       padding: 2rem 4%;
    }
@@ -114,5 +124,10 @@
 @media (max-width: 425px) {
    .home__content h1 {
       font-size: 4rem;
+   }
+
+   .slider-text__img {
+      width: 35rem;
+      height: 19.9rem;
    }
 }

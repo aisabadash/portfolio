@@ -48,10 +48,6 @@ window.addEventListener('DOMContentLoaded', () => {
          
       });
 
-      //sticky header
-      // let header = document.querySelector('header');
-      // header.classList.toggle('sticky', window.scrollY > 100);
-
       //remove toggle icon and navbar when click navbar links (scroll)
       menuIcon.classList.remove('svg-bx-x-dims');
       menuIconLink.setAttribute('xlink:href', 'img/icons/icons.svg#bx-menu');
@@ -82,10 +78,10 @@ window.addEventListener('DOMContentLoaded', () => {
    });
 
    //Slider SWIPER
-   const swiperImg = new Swiper('.slider-img', {
+   const swiperText = new Swiper('.slider-text', {
       loop: false,
       speed: 2400,
-      parallax: true,
+      spaceBetween: 20,
       pagination: {
          el: '.slider-pagination-count .total',
          type: 'custom',
@@ -93,34 +89,15 @@ window.addEventListener('DOMContentLoaded', () => {
             let totalRes = total >= 10 ? total : `0${total}`;
             return totalRes;
          }
-      }
-   });
-
-   const swiperText = new Swiper('.slider-text', {
-      loop: false,
-      speed: 2400,
-      // mousewheel: {
-      //    invert: false
-      // },
-      // pagination: {
-      //    el: ".swiper-pagination",
-      //    clickable: true,
-      // },
-      // scrollbar: {
-      //    el: ".swiper-scrollbar",
-      //    draggable: true,
-      // },
+      },
       navigation: {
          prevEl: ".swiper-button-prev",
          nextEl: ".swiper-button-next",
       }
    });
-   swiperImg.controller.control = swiperText;
-   swiperText.controller.control = swiperImg;
 
    //SLIDE CHANGE
    let curnum = document.querySelector('.slider-pagination-count .current');
-   // let pagcur = document.querySelector('.slider-pagination-current__num');
 
    swiperText.on('slideChange', function () {
       let ind = swiperText.realIndex + 1,
@@ -136,7 +113,6 @@ window.addEventListener('DOMContentLoaded', () => {
                y: 10
             });
             curnum.innerHTML = indRes;
-            // pagcur.innerHTML = indRes;
          }
       });
       gsap.to(curnum, .3, {
